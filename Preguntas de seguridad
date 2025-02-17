@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<head>
+	<meta charset="utf-8">
+	<title>Preguntas de seguridad</title>
+	<script type="text/javascript">
+		const Resp = ["Carlos","María","micasadeloschorros", "Enero", "Ford", "Cleo"];
+		const Preg = ["¿Cual es el nombre de tu primer sobrino?","¿Cual es el nombre de tu mamá?","¿En cual ciudad nació usted?","¿Cual es el mes de cumpleaños de su mamá?","¿Cual es la marca de su primer vehículo?","¿Cual es el nombre de su mascota?"]
+		let i;
+		const mensaje = "Indica el número de la pregunta de seguridad de la que desea saber la respuesta:\n"+
+						"1)¿Cual es el nombre de tu primer sobrino?\n"+
+						"2)¿Cual es el nombre de tu mamá?\n"+
+						"3)¿En cual ciudad nació usted?\n"+
+						"4)¿Cual es el mes de cumpleaños de su mamá?\n"+
+						"5)¿Cual es la marca de su primer vehículo?\n"+
+						"6)¿Cual es el nombre de su mascota?";
+		const regex = new RegExp("[1-6]")
+		
+		function Validación(){
+			do {
+				i = prompt(mensaje);
+				if !(regex.test(i[0])) {
+					alert("Error: Valor inválido.\n"+"Debe introducir un numero de pregunta (Entre 1 y 6)");
+				}
+			}while(!(regex.test(i[0])));
+			document.getElementById("Pregunta").innerText = Preg[i-1];
+			document.getElementById("Respuesta").innerText = Resp[i-1];
+		}
+	</script>
+	</head>
+	<body>
+	<p>Programa que da las respuestas<br> a las preguntas de seguridad</p>
+	<button onclick="Validación">Preguntas de seguridad</button>
+	<p><br>
+	<label id="Pregunta"></label><br>
+	Respuesta: <label id="Respuesta"></label>
+	</p>
+	
+	</body>
+</html>

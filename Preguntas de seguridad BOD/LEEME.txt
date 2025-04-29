@@ -1,0 +1,5 @@
+Instrucciones para correr el programa:
+1)Darle click al archivo para abrirlo
+2)Darle click a la ventana con la escritura que es pesada e ilegible de leer: ese es el script (o codigo) del programa.Hacerlo para que aparezca el cursor.
+3) Presiona F5 para correr el programa, y seguir las instrucciones
+4) En caso de que finalizo el programa y desea reabrirlo, repetir pasos 1-3).  
